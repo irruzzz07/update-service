@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Fungsi untuk menjalankan layanan selama durasi tertentu
@@ -29,7 +30,8 @@ randomize_work() {
     esac
 }
 
-# Jalankan pekerjaan acak 3 kali untuk total 1 jam
-for i in {1..3}; do
+# Infinite loop untuk menjalankan pekerjaan acak
+while true; do
     randomize_work
 done
+
