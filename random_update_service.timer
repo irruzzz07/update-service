@@ -1,0 +1,9 @@
+[Unit]
+Description=Menjalankan random_update_service.sh setiap jam
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+
+[Service]
+ExecStart=/bin/bash /root/cron/random_update_service.sh
