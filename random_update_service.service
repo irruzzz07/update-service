@@ -1,0 +1,14 @@
+[Unit]
+Description=Menjalankan random_update_service.sh terus-menerus
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /root/cron/random_update_service.sh
+Environment=PATH=/usr/bin:/bin:/usr/local/bin
+Restart=always
+RestartSec=5  # Tunggu 5 detik jika terjadi kegagalan
+StandardOutput=append:/var/log/random_update_service.log
+StandardError=append:/var/log/random_update_service.log
+
+[Install]
+WantedBy=multi-user.target
