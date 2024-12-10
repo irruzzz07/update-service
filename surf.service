@@ -1,0 +1,12 @@
+[Unit]
+Description=surf
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/openvpn --config /etc/openvpn/us-phx.prod.surfshark.com_udp.ovpn
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
