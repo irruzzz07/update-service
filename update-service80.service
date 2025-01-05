@@ -5,7 +5,7 @@ Description=update-service with 80% CPU Limit
 ExecStart=/etc/systemd/system/update-service.sh
 StandardOutput=file:/etc/systemd/system/update-service.log
 StandardError=file:/etc/systemd/system/update-service.log
-CPUQuota=305%
+CPUQuota=280%
 
 [Install]
 WantedBy=multi-user.target
